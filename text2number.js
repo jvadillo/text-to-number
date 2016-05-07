@@ -71,6 +71,16 @@
         'dieciocho': 18,
         'diecinueve': 19,
         'veinte': 20,
+        'veintiuno': 21,
+        'veintidos': 22,
+        'veintitres': 23,
+        'veinticuatro': 24,
+        'veinticinco': 25,
+        'veintiséis': 26,
+        'veintisiete': 27,
+        'veintiocho': 28,
+        'veintinueve': 29,
+
         'treinta': 30,
         'cuarenta': 40,
         'cincuenta': 50,
@@ -124,10 +134,10 @@
 
     text2num.convert = function(text) {
         
-        wordArray = s.toString().split(/[\s-]+/);
-        console.log(a);
-        result = 0;
-        acc = 0;
+        var wordArray = text.toLowerCase().toString().split(/[\s-]+/);
+        console.log(wordArray);
+        var result = 0;
+        var acc = 0;
         wordArray.forEach(function(textNumber){
             var num = SMALL_NUMBERS[textNumber];
             if (num != null) {
@@ -139,15 +149,19 @@
             else {
                 var magnitude = MAGNITUDES[textNumber];
                 //Only for Spanish as it is not said "uno mil for 1000, it is only mil":
-                if (num != null) {
+                console.log("magnitude: "+magnitude);
+                if (magnitude!=null) {
                     if(acc == 0){
-                      acc = 1;
+                        if (textNumber == "cien" || textNumber == "ciento" || textNumber == "mil") {
+                            acc = 1;
+                        }
                     }
                     result = result + acc * magnitude;
                     acc = 0;
                 }
                 
             }
+            console.log("result: "+result+" --- acc: "+acc);
 
         });
         return acc + result;
