@@ -1,5 +1,5 @@
 {
-  "name": "text2number",
+  "name": "text-to-number",
   "description": "Convert the given number in words to numerical format.",
   "main": "",
   "keywords": [
@@ -9,7 +9,7 @@
     "Jon Vadillo <vadillo.jon@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "www.jonvadillo.com",
+  "homepage": "https://github.com/jvadillo/text-to-number",
   "ignore": [
     "**/.*",
     "node_modules",
