@@ -1,0 +1,20 @@
+{
+  "name": "text2number",
+  "description": "Convert the given number in words to numerical format.",
+  "main": "",
+  "keywords": [
+    "number"
+  ],
+  "authors": [
+    "Jon Vadillo <vadillo.jon@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "www.jonvadillo.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
